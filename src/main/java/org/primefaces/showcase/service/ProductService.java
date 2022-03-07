@@ -96,7 +96,8 @@ public class ProductService {
                 "Fitness", 15, InventoryStatus.INSTOCK, 5));
         products.add(new Product(1029, "gwuby345v", "Yoga Set", "Product Description", "yoga-set.jpg", 20,
                 "Fitness", 25, InventoryStatus.INSTOCK, 8));
-
+        products.get(0).setDisabled(true);
+        products.get(1).setDisabled(true);
     }
 
     public List<Product> getProducts() {

@@ -39,6 +39,7 @@ public class Product implements Serializable {
     private InventoryStatus inventoryStatus;
     private int rating;
     private List<Order> orders;
+    private boolean disabled;
 
     public Product() {
     }
@@ -151,7 +152,15 @@ public class Product implements Serializable {
         this.orders = orders;
     }
 
-    @Override
+    public boolean isDisabled() {
+		return disabled;
+	}
+
+	public void setDisabled(boolean disabled) {
+		this.disabled = disabled;
+	}
+
+	@Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
